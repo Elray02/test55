@@ -1,11 +1,11 @@
 // console.log('hello Parcel');
 fetch("http://cdn.55labs.com/demo/api.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (myJson) {
-        // console.log(JSON.stringify(myJson));
-    });
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    // console.log(JSON.stringify(myJson));
+  });
 
 // const chart = document.querySelector('dl')
 // const bar = [].slice.call(document.querySelectorAll('dd'))
@@ -16,176 +16,179 @@ fetch("http://cdn.55labs.com/demo/api.json")
 // });
 
 {
-    //list of skills
-    var data = [
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        },
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        },
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        },
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        },
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        },
-        {
-            name: "SQL",
-            work: 90,
-            personal: 10
-        },
-        {
-            name: "PHP",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "jS",
-            work: 30,
-            personal: 70
-        },
-        {
-            name: "jQuery",
-            work: 40,
-            personal: 60
-        },
-        {
-            name: "WordPress",
-            work: 20,
-            personal: 80
-        }
-    ];
+  //list of skills
+  var data = [
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    },
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    },
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    },
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    },
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    },
+    {
+      name: "SQL",
+      work: 90,
+      personal: 10
+    },
+    {
+      name: "PHP",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "jS",
+      work: 30,
+      personal: 70
+    },
+    {
+      name: "jQuery",
+      work: 40,
+      personal: 60
+    },
+    {
+      name: "WordPress",
+      work: 20,
+      personal: 80
+    }
+  ];
 
-    displayData(data);
-    // animate();
+  displayData(data);
+  // animate();
 
-    //Functions
-    //display data
-    function displayData(inputSkills) {
-        const bar = document.querySelector(".bars");
-        const skill = document.querySelector(".skills");
+  //Functions
+  //display data
+  function displayData(inputSkills) {
+    const bar = document.querySelector(".bars");
+    const skill = document.querySelector(".skills");
 
-        const markUpSkills = `${inputSkills.map(
-            (v, i) => `<li style="--start: ${i};"> <span> ${v.name} </li> </span>`
-        ).join("")}
+    const markUpSkills = `${inputSkills
+      .map(
+        (v, i) => `<li style="--start: ${i};"> <span> ${v.name} </li> </span>`
+      )
+      .join("")}
         `;
-        const markUpBar = `${inputSkills.map(
-            (v, i) =>
-                `<li  style="--start: ${i};">
+    const markUpBar = `${inputSkills
+      .map(
+        (v, i) =>
+          `<li  style="--start: ${i};">
         <div class='bar'  style="--barwidth: ${v.personal}%;" >
             ${v.personal}
         </div>
@@ -193,13 +196,14 @@ fetch("http://cdn.55labs.com/demo/api.json")
             ${v.work}
         </div>
     </li>`
-        ).join("")}`;
+      )
+      .join("")}`;
 
-        skill.innerHTML = markUpSkills;
-        bar.insertAdjacentHTML("beforeend", markUpBar);
-    }
-};
+    skill.innerHTML = markUpSkills;
+    bar.insertAdjacentHTML("beforeend", markUpBar);
+  }
+}
 
 function percentage(a, b) {
-    return Math.floor((a / b) * 100);
-}
+  return Math.floor((a / b) * 100);
+};
