@@ -175,15 +175,15 @@ fetch("http://cdn.55labs.com/demo/api.json")
 
     //Functions
     //display data
-    function displayData(Inputskills) {
+    function displayData(inputSkills) {
         const bar = document.querySelector(".bars");
         const skill = document.querySelector(".skills");
 
-        const markUpSkills = `${Inputskills.map(
+        const markUpSkills = `${inputSkills.map(
             (v, i) => `<li style="--start: ${i};"> <span> ${v.name} </li> </span>`
         ).join("")}
-`;
-        const markUpBar = `${Inputskills.map(
+        `;
+        const markUpBar = `${inputSkills.map(
             (v, i) =>
                 `<li  style="--start: ${i};">
         <div class='bar'  style="--barwidth: ${v.personal}%;" >
