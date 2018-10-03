@@ -1,5 +1,5 @@
 // console.log('hello Parcel');
-fetch('http://cdn.55labs.com/demo/api.json')
+fetch("http://cdn.55labs.com/demo/api.json")
     .then(function (response) {
         return response.json();
     })
@@ -15,8 +15,7 @@ fetch('http://cdn.55labs.com/demo/api.json')
 //     element.style.setProperty('--value', '10');
 // });
 
-
-(function () {
+{
     //list of skills
     var data = [
         {
@@ -168,26 +167,25 @@ fetch('http://cdn.55labs.com/demo/api.json')
             name: "WordPress",
             work: 20,
             personal: 80
-        },
+        }
     ];
-
 
     displayData(data);
     // animate();
 
-
-
     //Functions
     //display data
     function displayData(Inputskills) {
-        const bar = document.querySelector('.bars');
-        const skill = document.querySelector('.skills');
+        const bar = document.querySelector(".bars");
+        const skill = document.querySelector(".skills");
 
-        const markUpSkills = `${Inputskills.map((v,i) =>
-             `<li style="--start: ${i};"> <span> ${v.name} </li> </span>`).join('')}
+        const markUpSkills = `${Inputskills.map(
+            (v, i) => `<li style="--start: ${i};"> <span> ${v.name} </li> </span>`
+        ).join("")}
 `;
-        const markUpBar = `${Inputskills.map((v,i) =>
-    `<li  style="--start: ${i};">
+        const markUpBar = `${Inputskills.map(
+            (v, i) =>
+                `<li  style="--start: ${i};">
         <div class='bar'  style="--barwidth: ${v.personal}%;" >
             ${v.personal}
         </div>
@@ -195,17 +193,13 @@ fetch('http://cdn.55labs.com/demo/api.json')
             ${v.work}
         </div>
     </li>`
-    ).join('')}`;
-    
-    skill.innerHTML = markUpSkills;
-    bar.insertAdjacentHTML('beforeend', markUpBar);
-    
+        ).join("")}`;
 
+        skill.innerHTML = markUpSkills;
+        bar.insertAdjacentHTML("beforeend", markUpBar);
     }
-
-})()
-
+};
 
 function percentage(a, b) {
-    return Math.floor((a / b) * 100)
+    return Math.floor((a / b) * 100);
 }
