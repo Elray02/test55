@@ -8,15 +8,15 @@ fetch("http://cdn.55labs.com/demo/api.json")
     const players = myJson.data.DAILY.dataByMember.players;
     const date = myJson.data.DAILY.dates;
     // let {players: players, dates: date } =  myJson.data.DAILY.dataByMember;
-    let {john: a ,larry:b} = players;
+    let {john: j ,larry:l} = players;
     
     // console.log(date);
     
-   let data = a.points.map((user,i) => {
+   let data = j.points.map((john,i) => {
       return  {
         day: date[i],
-        scoreJ: user,
-        scoreL: b.points[i]
+        scoreJ: john,
+        scoreL: l.points[i]
       };
     });
 
