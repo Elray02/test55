@@ -3,8 +3,26 @@ fetch("http://cdn.55labs.com/demo/api.json")
   .then(function(response) {
     return response.json();
   })
-  .then(function(myJson) {
-    // console.log(JSON.stringify(myJson));
+  .then( myJson => {
+    // console.log(myJson.data.DAILY.dataByMember.players);
+    const players = myJson.data.DAILY.dataByMember.players;
+    const date = myJson.data.DAILY.dates;
+    // let {players: players, dates: date } =  myJson.data.DAILY.dataByMember;
+    let {john: a ,larry:b} = players;
+    
+    // console.log(date);
+    
+   let data = a.points.map((user,i) => {
+      return  {
+        day: date[i],
+        scoreJ: user,
+        scoreL: b.points[i]
+      };
+    });
+
+    console.log(data);
+    
+    
   });
 
 // const chart = document.querySelector('dl')
@@ -14,6 +32,7 @@ fetch("http://cdn.55labs.com/demo/api.json")
 // bar.forEach(element => {
 //     element.style.setProperty('--value', '10');
 // });
+
 
 {
   //list of skills
