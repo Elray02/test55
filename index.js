@@ -2,6 +2,7 @@
 
 let data = [];
 let isOpen = false;
+history.pushState(`total`, 'Point stat', `/ `);
 fetch("http://cdn.55labs.com/demo/api.json")
   .then(function(response) {
     return response.json();
@@ -75,9 +76,11 @@ const detailDate = document.querySelector('#day');
         avgJ.innerHTML = data[position].percJohn + '%';
         avgL.innerHTML = data[position].percLarry + '%';
         isOpen = true;
+        history.pushState(`detail${data[position].day}`, 'Point stat', `/detail${data[position].day}`);
     }else {
-      isOpen = false;
-      overlay.remove('active');
+        isOpen = false;
+        history.pushState(`total`, 'Point stat', `/`);
+        overlay.remove('active');
     }
     
   
