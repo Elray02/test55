@@ -134,6 +134,95 @@ h1{
   display:inline-block;
   text-align:center;
 }
+
+
+
+
+
+ .stats__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* padding: $spacing; */
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+    
+
+    
+
+  }
+    .active {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: none;
+              transform: none;
+    }
+
+  .stats__overlay-avg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+    background: mix(crimson, lighten(black, 20), 15);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    
+    
+
+    
+  }
+      #avg {
+      font-size: 100px;
+      font-weight: 700;
+    }
+
+  .stats__overlay-info {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header{
   position:fixed;
   left:0px;
@@ -210,4 +299,5 @@ p{
   width:90%;
   margin:0px auto;
   text-align:center;
+}
 }

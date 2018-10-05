@@ -1,4 +1,6 @@
 // console.log('hello Parcel');
+
+let data = [];
 fetch("http://cdn.55labs.com/demo/api.json")
   .then(function(response) {
     return response.json();
@@ -9,7 +11,7 @@ fetch("http://cdn.55labs.com/demo/api.json")
 
     let { john: j, larry: l } = players;
 
-    let data = j.points.map((john, i) => {
+    data = j.points.map((john, i) => {
       const totalPoints = john + l.points[i] || 0;
       percJohn = percentage(john, totalPoints);
       percLarry = percentage(l.points[i], totalPoints);
@@ -20,9 +22,10 @@ fetch("http://cdn.55labs.com/demo/api.json")
         scoreJ: john,
         scoreL: l.points[i]
       };
-    });
+    })
+    .filter(i => i.scoreJ > 0);
 
-    displayData(data.filter(i => i.scoreJ > 0));
+    displayData(data);
   });
 
 //display data
@@ -31,6 +34,10 @@ function displayData(inputData) {
 
   const bar = document.querySelector(".bars");
   const skill = document.querySelector(".skills");
+
+    bar.addEventListener('click',viewDetail);
+
+
 
   const markUpSkills = `${inputData
     .map((v, i) => `<li style="--start: ${i};"> <span> ${v.day} </li> </span>`)
@@ -54,6 +61,14 @@ function displayData(inputData) {
   bar.insertAdjacentHTML("beforeend", markUpBar);
 }
 
+const viewDetail = (e) => {
+
+    const position = Number(getComputedStyle(e.path[1]).getPropertyValue('--start'));
+  console.log( 
+    data[position].scoreJ
+    );
+  
+}
 
 function formatDate(inputDate) {
   if (inputDate) {
