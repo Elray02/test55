@@ -141,17 +141,17 @@ h1{
 
  .stats__overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* padding: $spacing; */
+    top: 30vh;
+    left: 40vw;
+    width: 30vw;
+    height: 35vh;
     -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
     visibility: hidden;
     opacity: 0;
     -webkit-transition: all .6s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+    background: coral;
     
 
     
@@ -165,33 +165,31 @@ h1{
     }
 
   .stats__overlay-avg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 350px;
-    height: 350px;
+    position: relative;
+    top: 30%;
+    left: 25%;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     text-align: center;
-    background: mix(crimson, lighten(black, 20), 15);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    /* -webkit-box-orient: vertical; */
     -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    
-    
-
-    
-  }
-      #avg {
-      font-size: 100px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #45B29D;
+    float: left;
+    margin: auto 2vw;
+}
+      .avg {
+      font-size: 60px;
       font-weight: 700;
     }
 
@@ -202,26 +200,9 @@ h1{
     display: flex;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  #john{
+   background:#EFC94C;
+  }
 
 .header{
   position:fixed;
@@ -234,15 +215,8 @@ h1{
           box-shadow: 0 0px 6px 0px #858585;
 }
 
-.footer{
-  position:absolute;
-  bottom:-7%; 
-  right:0px;
-  color:#333;
-}
-
-@media only screen and (max-width: 800px) {
-	.chart{
+@media only screen and (max-width: 1024px) {
+  	.chart{
    width:100%;
  } 
   .skills{ 
@@ -252,8 +226,16 @@ h1{
     width: 75%;
     left:25%;
   }
-  
+  .stats__overlay{
+    width: 51vw;
+    height: 60vh;
+  }
+  .stats__overlay-avg{
+      margin: auto 13vw;
+  }
 }
+
+
 
 @media only screen and (min-width: 800px) {
   	.chart{
@@ -300,4 +282,5 @@ p{
   margin:0px auto;
   text-align:center;
 }
-}
+    
+    

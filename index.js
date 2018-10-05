@@ -1,6 +1,7 @@
-// console.log('hello Parcel');
+
 
 let data = [];
+let isOpen = false;
 fetch("http://cdn.55labs.com/demo/api.json")
   .then(function(response) {
     return response.json();
@@ -34,8 +35,9 @@ function displayData(inputData) {
 
   const bar = document.querySelector(".bars");
   const skill = document.querySelector(".skills");
-
+  const back = document.querySelector(".stats__overlay-back");
     bar.addEventListener('click',viewDetail);
+    back.addEventListener('click',viewDetail );
 
 
 
@@ -62,11 +64,24 @@ function displayData(inputData) {
 }
 
 const viewDetail = (e) => {
-
+    const overlay = document.querySelector(".stats__overlay").classList;
     const position = Number(getComputedStyle(e.path[1]).getPropertyValue('--start'));
-  console.log( 
-    data[position].scoreJ
-    );
+const avgJ = document.querySelector('#avgJ');
+const avgL = document.querySelector('#avgL');
+const detailDate = document.querySelector('#day');
+    // const 
+
+    if(!isOpen) {
+        overlay.add('active');
+        detailDate.innerHTML = data[position].day;
+        avgJ.innerHTML = data[position].percJohn + '%';
+        avgL.innerHTML = data[position].percLarry + '%';
+        isOpen = true;
+    }else {
+      isOpen = false;
+       overlay.remove('active');
+    }
+    
   
 }
 
