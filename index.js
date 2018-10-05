@@ -29,7 +29,6 @@ fetch("http://cdn.55labs.com/demo/api.json")
     displayData(data);
   });
 
-//display data
 function displayData(inputData) {
 
 
@@ -69,7 +68,6 @@ const viewDetail = (e) => {
 const avgJ = document.querySelector('#avgJ');
 const avgL = document.querySelector('#avgL');
 const detailDate = document.querySelector('#day');
-    // const 
 
     if(!isOpen) {
         overlay.add('active');
