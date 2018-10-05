@@ -77,7 +77,7 @@ const detailDate = document.querySelector('#day');
         isOpen = true;
     }else {
       isOpen = false;
-       overlay.remove('active');
+      overlay.remove('active');
     }
     
   
